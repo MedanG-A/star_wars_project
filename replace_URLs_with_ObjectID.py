@@ -56,7 +56,4 @@ class ReplacePilotUrls(sp.Starship_Pilots, sw.StarWarsAPI):
         return starships_data
 
 
-pilot_replace = ReplacePilotUrls()
 
-print(pilot_replace.pilot_ids())
-print(pilot_replace.replace_urls_with_objectids())

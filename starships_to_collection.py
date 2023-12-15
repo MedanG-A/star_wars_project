@@ -28,4 +28,4 @@ class StarshipsToCollection(Rp.ReplacePilotUrls):
 
 
 # running the function to check it works, but this can just be put into main
-StarshipsToCollection().starshipstocoll()
+# StarshipsToCollection().starshipstocoll()
