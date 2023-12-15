@@ -46,14 +46,18 @@ class ReplacePilotUrls(sp.Starship_Pilots, sw.StarWarsAPI):
         return pilot_objectids
 
     def replace_urls_with_objectids(self):
+        # Retrieves the list of starship: pilot_objectids dictionaries from pilot_ids function
         pilot_object_ids = self.pilot_ids()
+        # Retrieves the list of starship dictionaries from the starships API
         starships_data = self.get_starships_data()['results']
-        for i in range(len(starships_data)):
-            if len(starships_data[i]['pilots']) >= 1:
-                for pilot in starships_data[i]['pilots']:
-                    for ship_dict in pilot_object_ids:
-                        for each_ship in ship_dict:
-                            if starships_data[i]['name'] == each_ship:
+        for i in range(len(starships_data)):        # Iterates through the number of starship dictionaries
+            if len(starships_data[i]['pilots']) >= 1:       # Only starships containing >= 1 pilots URLs are passed
+                for pilot in starships_data[i]['pilots']:       # Iterates through each pilot
+                    for ship_dict in pilot_object_ids:          # Iterates through each starship dict
+                        for each_ship in ship_dict:             # Iterates through each starship dict to extract the key
+                            if starships_data[i]['name'] == each_ship:      # Only ships with the same name are passed
+                                # Replaces the list of pilot URLs in the starship list with the corresponding
+                                # pilot object ids
                                 starships_data[i]['pilots'] = ship_dict[each_ship]
 
         return starships_data
