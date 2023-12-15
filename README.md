@@ -13,13 +13,13 @@ The goal was to replace 'pilots' with a list of ObjectIDs from our characters co
 To achieve this task, Python scripts have been developed. The following steps outline the process:
 
 
-## - Data Extraction:
+## Data Extraction:
 - Utilized the requests library to fetch data on all available starships from the Star Wars API.
 
-## - Data Transformation:
+## Data Transformation:
 - Implemented functions to transform the starships data, specifically retrieving the information from the pilot URL's and replacing the URLs with character ObjectIDs cross-referenced from our characters collection.
 
-## - Data Loading:
+## Data Loading:
 - Implemented functions to connect to a MongoDB database and insert the transformed starships data into its own collection.
 
 ## Requiremnts:
