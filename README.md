@@ -7,7 +7,7 @@ The data used in this project was sourced from the [Star Wars API](https://swapi
 ## Task Overview
 The primary task of this project was to pull data on all available starships from the API. The "pilots" key in the starships data contains URLs pointing to the characters who pilot the starship. 
 
-The goal was to replace 'pilots' with a list of ObjectIDs from our characters collection. After this transformation, the starships data was inserted into its own collection using MongoDB for the backend. This allows effective filtering when querying the Star Wars data.
+The goal was to replace 'pilots' with a list of ObjectIDs from our characters collection. After this transformation, the starships data was inserted into its own collection using MongoDB for the backend, allowing effective filtering when querying the Star Wars data.
 
 ## Implementation
 To achieve this task, Python scripts have been developed. The following steps outline the process:
